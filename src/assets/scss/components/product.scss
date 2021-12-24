@@ -1,0 +1,21 @@
+.product {
+  margin-top: 75px;
+  background: #FFFFFF;
+  border: 7px solid #0074B8;
+  box-sizing: border-box;
+  padding: 50px 90px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  &:hover {
+    text-decoration: none;
+  }
+  &__title {
+    font-size: rem(45px);
+    letter-spacing: 0.06em;
+
+    color: #1C1C1C;
+    font-weight: bold;
+    text-align: center;
+  }
+}

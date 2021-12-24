@@ -1,0 +1,87 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Webpack + Pug';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'index-page';
+
+block content
+  section.section.section_first
+    .container
+      .first-screen
+        .first-slider
+          -for(let i = 0; i<6;i++)
+            .first-slider__item
+              .row.d-flex.flex-row-reverse
+                .col-12.col-lg-6
+                  .first-slider__image
+                    img(src="../assets/img/slide.png")
+                .col-12.col-lg-6
+                  .first-slider__text
+                    h1.first-slider__title VEKAMOTION 82 новая степень свободы
+                    p.first-slider__desc Подъёмно-раздвижная дверь Новая разработка от компании VEKA
+                    a(href='#').first-slider__button Подробнее
+        .first-screen__slider
+          .row
+            .col-12.col-lg-7
+              .row
+                .col-12.col-md-9
+                  .second-slider
+                    -for(let i = 0; i<6;i++)
+                      .second-slider__item
+                        div
+                          img(src='../assets/img/slide2.jpg')
+                .col-3.slider-buttons.d-none.d-md-flex
+                  .slide-button.slide-button_prev
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6.75L9.75 6.75L9.75 5.25L9 5.25L9 6.75ZM0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989592 6.3033 0.696699C6.01041 0.403805 5.53553 0.403805 5.24264 0.696699L0.46967 5.46967ZM9 5.25L1 5.25L1 6.75L9 6.75L9 5.25Z" fill="#0074B8"/>
+                    </svg>
+                  .slide-button.slide-button_next
+                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6.75L9.75 6.75L9.75 5.25L9 5.25L9 6.75ZM0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989592 6.3033 0.696699C6.01041 0.403805 5.53553 0.403805 5.24264 0.696699L0.46967 5.46967ZM9 5.25L1 5.25L1 6.75L9 6.75L9 5.25Z" fill="#0074B8"/>
+                    </svg>
+  section.section.section_about
+    .container
+      h2.title.title_dark.title_second.title_center О VEKAMOTION 82
+      p.title__desc Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+    .about
+      .container
+        .about__item
+          .row.align-items-center.d-flex
+            .col-12.col-lg-5
+              .about__image
+                img(src="../assets/img/slide.png")
+            .col-12.col-lg-5.offset-lg-2
+              h3.about__title БОЛЬШИЕ СТЕКЛЯННЫЕ ПОВЕРХНОСТИ
+              .about__desc с высоким светопропусканием
+        .about__item
+          .row.align-items-center.d-flex.flex-row-reverse
+            .col-12.col-lg-5.offset-lg-2
+              .about__image
+                img(src="../assets/img/slide.png")
+            .col-12.col-lg-5
+              h3.about__title.about__title_reverse БОЛЬШИЕ СТЕКЛЯННЫЕ ПОВЕРХНОСТИ
+              .about__desc.about__desc_reverse с высоким светопропусканием
+        .about__item
+          .row.align-items-center.d-flex
+            .col-12.col-lg-5
+              .about__image
+                <iframe src="https://www.youtube.com/embed/edcriaI4V20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            .col-12.col-lg-5.offset-lg-2
+              h3.about__title БОЛЬШИЕ СТЕКЛЯННЫЕ ПОВЕРХНОСТИ
+              .about__desc с высоким светопропусканием
+  section.section.section_products
+    .container
+      h2.title.title_dark.title_second.title_center О VEKAMOTION 82
+      p.title__desc Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+
+    .container
+      -for(let i = 0; i<2;i++)
+        a(href='#').product
+          .row
+            .col-12
+              h3.product__title VEKAMOTION 82
+            .col-12.col-lg-4
+              .product__image
+                img(src='../assets/img/product.png')
+block script

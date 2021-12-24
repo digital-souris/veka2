@@ -1,0 +1,41 @@
+.section {
+  &_first {
+    padding-top: 40px;
+  }
+  &_about {
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+    @include media(992) {
+      padding-top: 50px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 603.61px;
+      height: 603.61px;
+      left: -177px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+
+      background: rgba(80, 186, 248, 0.2);
+    }
+  }
+  &_products {
+    padding-top: 200px;
+    position: relative;
+    padding-bottom: 188px;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1220.61px;
+      height: 1220.61px;
+      right: -177px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+
+      background: rgba(80, 186, 248, 0.2);
+    }
+  }
+}

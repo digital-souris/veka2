@@ -1,0 +1,76 @@
+// header style
+
+.header {
+  padding: 25px 0;
+  position: relative;
+  @media screen and (max-width: 992px) {
+    padding: 10px 0;
+  }
+  &__logo {
+    max-width: 114px;
+    @media screen and (max-width: 992px) {
+      max-width: 80px;
+    }
+    svg {
+      vertical-align: top;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__text {
+    font-size: rem(30px);
+    color: #000;
+  }
+  &__menu {
+    font-size: rem(16px);
+    @media screen and (max-width: 1200px) {
+      font-size: rem(14);
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    height: 61px;
+    background: #0074B8;
+    padding: 0 1rem;
+    text-align: center;
+    justify-content: center;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+    @media screen and (max-width: 1200px) {
+      font-size: rem(24);
+    }
+    @media screen and (max-width: 992px) {
+      height: 40px;
+      max-width: 40px;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+    @media screen and (max-width: 992px) {
+      position: absolute;
+      top: 100%;
+      z-index: 100;
+      background-color: #fff;
+      padding: 20px;
+      left: 0;
+      right: 0;
+      a {
+        font-size: rem(24);
+      }
+      i {
+        font-size: rem(32);
+      }
+    }
+  }
+}

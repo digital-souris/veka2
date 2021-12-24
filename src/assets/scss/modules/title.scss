@@ -1,0 +1,23 @@
+.title {
+  font-weight: bold;
+  &_dark {
+    color: #141414;
+  }
+
+  &_second {
+    font-size: rem(40px);
+  }
+  &_center {
+    text-align: center;
+  }
+
+
+  &__desc {
+    text-align: center;
+    max-width: 621px;
+    color: #000;
+    font-size: rem(18px);
+    margin: 0 auto;
+    padding-top: 6px;
+  }
+}

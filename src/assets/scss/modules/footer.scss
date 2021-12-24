@@ -1,0 +1,59 @@
+// footer style
+
+.footer {
+  background-color: #12253B;
+  padding: 120px 0;
+  @include media(992) {
+    padding: 60px 0;
+  }
+  &__logo {
+    max-width: 114px;
+    @media screen and (max-width: 992px) {
+      max-width: 80px;
+    }
+    svg {
+      vertical-align: top;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__menu {
+    column-count: 2;
+    @include media(480) {
+      column-count: 1;
+    }
+    a {
+      color: rgba(255, 255, 255, 0.69);
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  &__topline {
+    text-align: right;
+    svg {
+      margin: 0 5px;
+    }
+    @include media(768) {
+      padding-top: 30px;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: rem(18);
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  &__callback {
+    text-align: right;
+    font-weight: 900;
+    font-size: rem(18px);
+    margin-top: 15px;
+    color: #FFFFFF;
+  }
+}
