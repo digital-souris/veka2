@@ -2,6 +2,15 @@
   &_first {
     padding-top: 40px;
   }
+  &_blue {
+    background-color: #DCF1FE;
+  }
+  &_portfolio {
+    padding-top: 150px;
+    @include media(992) {
+      padding-top: 60px;
+    }
+  }
   &_about {
     padding-top: 100px;
     position: relative;
@@ -107,5 +116,13 @@
   &_documents {
     padding-top:120px;
     padding-bottom: 150px;
+  }
+  &_technologies {
+    padding-top: 80px;
+    padding-bottom: 137px;
+    @include media(992) {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
   }
 }

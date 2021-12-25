@@ -25,6 +25,13 @@ $('.preim__head a').click(function (e) {
     return false
 })
 $(document).ready(function () {
+    $('.portfolio-slider').slick({
+        infinite: true,
+        // arrows: false,
+        dots: true,
+        prevArrow: $('.slide-button_prev'),
+        nextArrow: $('.slide-button_next'),
+    })
     $('.first-slider').slick({
         infinite: true,
         // arrows: false,
@@ -63,6 +70,28 @@ $(".top").click(function (){
         scrollTop: $(".header").offset().top
     }, 500);
 });
+
+$('.technology__head a').click(function (e) {
+    e.preventDefault()
+    if (!$(this).parent().hasClass('active')) {
+        $('.technology__head li').removeClass('active')
+        $(this).parent().addClass('active')
+        $('.technology__item').removeClass('active')
+        $('.technology__item').eq($('.technology__head li.active').index()).addClass('active')
+    }
+    return false
+})
+$('.portfolio__tabs a').click(function (e) {
+    e.preventDefault()
+    if (!$(this).parent().hasClass('active')) {
+        $('.portfolio__tabs li').removeClass('active')
+        $(this).parent().addClass('active')
+        $('.portfolio__wrapper').removeClass('active')
+        $('.portfolio__wrapper').eq($('.portfolio__tabs li.active').index()).addClass('active')
+        $('.portfolio__wrapper.active .portfolio-slider').slick('setPosition');
+    }
+    return false
+})
 
 $(window).scroll(function () {
     let of = $(document).scrollTop()

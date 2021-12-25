@@ -6,9 +6,18 @@
 
   &_second {
     font-size: rem(40px);
+    @include media(992) {
+      font-size: rem(32);
+    }
+  }
+  &_blue {
+    color: #0074B8;
   }
   &_main {
     font-size: rem(60);
+    @include media(992) {
+      font-size: rem(40);
+    }
   }
   &_center {
     text-align: center;
@@ -27,6 +36,9 @@
       margin: 0;
       max-width: 431px;
       padding-top: 36px;
+    }
+    &_tech {
+      max-width: 100%;
     }
   }
   &_uppercase {

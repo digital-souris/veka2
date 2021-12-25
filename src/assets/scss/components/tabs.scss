@@ -83,4 +83,52 @@
       display: block;
     }
   }
+
+  &__dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    &:hover {
+      .tabs__text {
+        display: block;
+      }
+    }
+    span {
+      width: 26px;
+      height: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: rem(20);
+      position: relative;
+      z-index: 2;
+      font-weight: bold;
+      cursor: pointer;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        bottom: 0;
+        background-color: #0074B8;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__text {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #0074B8;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    max-width: 500px;
+    width: 100%;
+    min-width: 40vw;
+  }
 }

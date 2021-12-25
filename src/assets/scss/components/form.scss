@@ -22,5 +22,13 @@
         color: #A2A2A2;
       }
     }
+    &_white {
+      padding-top: 0;
+      input {
+        border-color: #fff;
+        color: #fff;
+        background-color: transparent;
+      }
+    }
   }
 }
