@@ -76,7 +76,7 @@ block content
       p.title__desc Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
 
     .container
-      -for(let i = 0; i<2;i++)
+      -for(let i = 0;i<2;i++)
         a(href='#').product
           .row
             .col-12
@@ -84,4 +84,46 @@ block content
             .col-12.col-lg-4
               .product__image
                 img(src='../assets/img/product.png')
+            .col-12.col-lg-4
+              .product__text
+                p ширина профиля - 54 мм
+                p ширина стеклопакета - 54 мм
+                ul
+                  li
+                    i 1
+                    span Высокая  теплоизоляция
+                  li
+                    i 2
+                    span Герметичность класса 9A
+                  li
+                    i 3
+                    span Рамы повышенной стабильности
+                  li
+                    i 4
+                    span Расширенные профили
+            .col-12.col-lg-4
+              .row
+                .col-12
+                  .product__video(data-iframe="https://www.youtube.com/embed/edcriaI4V20")
+                    <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="34.5" cy="34.5" r="31" fill="#0074B8" stroke="#0074B8" stroke-width="7"/>
+                    <path d="M44 36L29.75 44.6603L29.75 27.3397L44 36Z" fill="white"/>
+                    </svg>
+                    span Посмотреть<br/>видео:
+                  .product__info Особенности конструкции VEKAMOTION 82
+  section.section.section_tabs
+    .container
+      h2.title.title_dark.title_second.title_center В ДЕТАЛЯХ
+      p.title__desc Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+    .container
+      .tabs
+        .tabs__head
+          .tabs__item.active(data-index="0") VEKAMOTION 82
+          .tabs__item(data-index="1") VEKAMOTION 82 MAX
+        .tabs__content
+          .tabs__wrap.active(data-index="0")
+            img(src="../assets/img/tab.png")
+          .tabs__wrap(data-index="1")
+            img(src="../assets/img/tab.png")
+
 block script

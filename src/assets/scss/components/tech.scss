@@ -1,0 +1,52 @@
+.tech {
+
+  &__item {
+    margin-bottom: 84px;
+    display: block;
+    max-height: 171px;
+    overflow: hidden;
+    max-width: 220px;
+    position: relative;
+    @include media(992) {
+      max-height: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    &:hover {
+      .tech__text {
+        top: 0;
+        -webkit-line-clamp: 10;
+      }
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: calc(100% - 50px);
+    transition: all .25s;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(#4C75A5, .8);
+    color: #fff;
+    padding: 4px 11px;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: rem(14);
+    @include media(992) {
+      position: static;
+    }
+
+  }
+}

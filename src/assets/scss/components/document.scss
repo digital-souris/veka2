@@ -1,0 +1,65 @@
+.document {
+  min-height: 137px;
+  background: #CCDAEA;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  @include media(768) {
+    padding: 10px;
+  }
+  .row {
+    width: 100%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__wrap {
+    padding-top: 64px;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 35px;
+    /* or 146% */
+
+    text-transform: uppercase;
+
+    color: #000000;
+  }
+  &__date {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 35px;
+    /* identical to box height, or 146% */
+
+    text-transform: uppercase;
+
+    color: #000000;
+    @include media(768) {
+      padding-top: 20px;
+    }
+  }
+  &__download {
+    @include media(768) {
+      padding-top: 20px;
+    }
+    a {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 24px;
+      /* identical to box height, or 133% */
+
+
+      color: #0074B8;
+      svg {
+        margin-right: 20px;
+      }
+    }
+  }
+}

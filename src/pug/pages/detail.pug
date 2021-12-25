@@ -1,0 +1,202 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+    - var pageClass = 'index-page';
+
+block content
+    section.section.section_first
+        .container
+            .first-screen
+                .first-slider
+                    -for (let i = 0; i < 6; i++)
+                        .first-slider__item
+                          .row.d-flex.flex-row-reverse
+                            .col-12.col-lg-6
+                              .first-slider__image
+                                img(src="../assets/img/slide.png")
+                            .col-12.col-lg-6
+                              .first-slider__text
+                                h1.first-slider__title VEKAMOTION 82 новая степень свободы
+                                p.first-slider__desc Подъёмно-раздвижная дверь Новая разработка от компании VEKA
+                                a(href='#').first-slider__button Подробнее
+                .first-screen__slider
+                    .row
+                        .col-12.col-lg-7
+                            .row
+                                .col-12.col-md-9
+                                    .second-slider
+                                        -for (let i = 0; i < 6; i++)
+                                          .second-slider__item
+                                            div
+                                              img(src='../assets/img/slide2.jpg')
+                                .col-3.slider-buttons.d-none.d-md-flex
+                                    .slide-button.slide-button_prev
+                                        <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 6.75L9.75 6.75L9.75 5.25L9 5.25L9 6.75ZM0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989592 6.3033 0.696699C6.01041 0.403805 5.53553 0.403805 5.24264 0.696699L0.46967 5.46967ZM9 5.25L1 5.25L1 6.75L9 6.75L9 5.25Z" fill="#0074B8"/>
+                                        </svg>
+                                    .slide-button.slide-button_next
+                                        <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 6.75L9.75 6.75L9.75 5.25L9 5.25L9 6.75ZM0.46967 5.46967C0.176777 5.76256 0.176777 6.23744 0.46967 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989592 6.3033 0.696699C6.01041 0.403805 5.53553 0.403805 5.24264 0.696699L0.46967 5.46967ZM9 5.25L1 5.25L1 6.75L9 6.75L9 5.25Z" fill="#0074B8"/>
+                                        </svg>
+    section.section.section_about.section_slider
+        .container
+            h2.title.title_dark.title_second.title_center О VEKAMOTION 82
+            p.title__desc Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+        .container
+            .about__wrapper
+                .about__wrap
+                    .slider-about
+                        -for(let i = 0; i<3;i++)
+                            .about__slide
+                                div
+                                    img(src="../assets/img/about.jpg")
+    section.section.section_tabs
+        .container
+            h2.title.title_dark.title_second.title_center В ДЕТАЛЯХ
+            p.title__desc Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+        .container
+            .tabs
+                .tabs__head
+                    .tabs__item.active(data-index="0") VEKAMOTION 82
+                    .tabs__item(data-index="1") VEKAMOTION 82 MAX
+                .tabs__content
+                    .tabs__wrap.active(data-index="0")
+                        img(src="../assets/img/tab.png")
+                    .tabs__wrap(data-index="1")
+                        img(src="../assets/img/tab.png")
+    section.section.section_preim
+        .container
+            h2.title.title_dark.title_second.title_center О VEKAMOTION 82
+            p.title__desc Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+        .preim
+            .container
+                .row.d-flex.flex-row-reverse.align-items-center
+                    .col-12.col-lg-6
+                        .preim__head
+                            ul
+                                li.active
+                                    a(href='#') Современная технология
+                                -for(let i = 0;i<4;i++)
+                                    li
+                                        a(href='#') Гидроизоляция
+                    .col-12.col-lg-6
+                        .preim__wrap.active
+                            .preim__content
+                               h3.preim__title Современная технология
+                               .preim__text
+                                   p Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+                        -for (let i = 0; i < 4; i++)
+                            .preim__wrap
+                               .preim__content
+                                  h3.preim__title Современная технология
+                                  .preim__text
+                                      p Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+    section.section.section_callback
+        .container
+            .row
+                .col-12.col-lg-10
+                    .callback
+                        .row.d-flex.align-items-center
+                            .col-12.col-md-8
+                                h2.callback__title Стоимость легко рассчитать с помощью нашего калькулятора
+                            .col-12.col-md-4
+                                .callback__button
+                                    <svg width="115" class="callback__rect" height="115" viewBox="0 0 115 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M57.2754 0L114.551 57.2756L57.2754 114.551L-0.000257671 57.2756L57.2754 0Z" fill="#2B8CFC"/>
+                                    </svg>
+                                    a(href='#')
+                                        span Рассчитать за<br/>2 минуты
+                                        <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.9699 0.873901L9.93563 1.90818L14.8109 6.78131H0.390625V8.21881H14.8109L9.93634 13.0927L10.9699 14.1262L17.0793 8.01684L17.5731 7.50006L17.0793 6.98328L10.9699 0.873901Z" fill="white"/>
+                                        </svg>
+    section.section.section_tech
+        .container
+            .row
+                .col-12.col-lg-6
+                    h2.title.title_second.title_dark Технология производства
+                    .title__desc.title__desc_left Текст небольшой - в качестве доп подзаголовка который используется для раскрытия основной идеии блока или описание доп функционала
+                -for(let i = 0; i < 6;i++)
+                    .col-12.col-md-6.col-lg-3
+                        a(href='#').tech__item
+                            .tech__image
+                                img(src='../assets/img/tech.jpg')
+                            .tech__text
+                                p Уплотнители Уплотнители Уплотнители  1231231Уп Уплотнители Уплотнители Уплотнители  1231231Уп Уплотнители Уплотнители Уплотнители  1231231Уп
+    section.section.section_form
+        .container
+            .row
+                .col-12.col-lg-6
+                    h2.title.title_second.title_dark.title_uppercase Ответим на все ваши вопросы и проведем подробную презентацию
+                .col-12.offset-lg-4.col-lg-8
+                    .row
+                        .col-12.col-lg-7
+                            .form__title Заполните форму и наш менеджер свяжется с вами в ближаейшее время
+                        .col-12
+                            .row.d-flex.align-items-center
+                                .col-12.col-lg-4
+                                    .form__item
+                                        input(type='text' name='name' placeholder='Имя')
+                                .col-12.col-lg-4
+                                    .form__item
+                                        input(type='text' name='name' placeholder='Имя')
+                                .col-12.col-lg-4
+                                    .form__item
+                                        .callback__button.callback__button_dark
+                                            <svg width="115" class="callback__rect" height="115" viewBox="0 0 115 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M57.2754 0L114.551 57.2756L57.2754 114.551L-0.000257671 57.2756L57.2754 0Z" fill="#2B8CFC"/>
+                                            </svg>
+                                            button
+                                                span Отправить
+                                                <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.9699 0.873901L9.93563 1.90818L14.8109 6.78131H0.390625V8.21881H14.8109L9.93634 13.0927L10.9699 14.1262L17.0793 8.01684L17.5731 7.50006L17.0793 6.98328L10.9699 0.873901Z" fill="white"/>
+                                                </svg>
+    section.section.section_callback.section_callback-footer
+        .container
+            .row
+                .col-12.col-lg-10
+                    .callback
+                        .row.d-flex.align-items-center
+                            .col-12
+                                h2.callback__title Отдел продаж
+                            .col-12
+                                .row
+                                    .col-12.col-md-6.col-lg-3
+                                        .callback__item
+                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.8945 6.47931C12.2517 6.47931 11.6234 6.66992 11.0889 7.02703C10.5545 7.38415 10.1379 7.89173 9.89192 8.48559C9.64594 9.07945 9.58158 9.73291 9.70698 10.3634C9.83238 10.9938 10.1419 11.5729 10.5964 12.0274C11.051 12.4819 11.6301 12.7915 12.2605 12.9169C12.8909 13.0423 13.5444 12.9779 14.1383 12.7319C14.7321 12.4859 15.2397 12.0694 15.5968 11.5349C15.9539 11.0005 16.1445 10.3721 16.1445 9.72931C16.1436 8.86766 15.8008 8.04158 15.1915 7.4323C14.5823 6.82301 13.7562 6.48029 12.8945 6.47931ZM12.8945 11.3543C12.5731 11.3543 12.259 11.259 11.9917 11.0804C11.7245 10.9019 11.5162 10.6481 11.3932 10.3512C11.2702 10.0542 11.2381 9.72751 11.3008 9.41229C11.3635 9.09707 11.5182 8.80752 11.7455 8.58026C11.9727 8.353 12.2623 8.19823 12.5775 8.13553C12.8927 8.07283 13.2195 8.10501 13.5164 8.228C13.8133 8.351 14.0671 8.55928 14.2457 8.82651C14.4242 9.09374 14.5195 9.40791 14.5195 9.72931C14.519 10.1601 14.3477 10.5732 14.043 10.8778C13.7384 11.1824 13.3254 11.3538 12.8945 11.3543Z" fill="white"/>
+                                            <path d="M19.1397 3.47941C17.5956 1.93569 15.5344 1.01865 13.3539 0.905291C11.1734 0.791934 9.02819 1.49029 7.33232 2.86558C5.63645 4.24087 4.51013 6.1956 4.17073 8.3525C3.83133 10.5094 4.30293 12.7156 5.49449 14.5452L11.6343 23.9709C11.7709 24.1806 11.9577 24.3529 12.1778 24.4722C12.3979 24.5915 12.6442 24.654 12.8946 24.654C13.1449 24.654 13.3912 24.5915 13.6113 24.4722C13.8314 24.3529 14.0182 24.1806 14.1548 23.9709L20.2948 14.5452C21.4005 12.8479 21.8891 10.8222 21.6788 8.80756C21.4685 6.79289 20.572 4.91174 19.1397 3.47941ZM18.9333 13.6582L12.8946 22.9283L6.85583 13.6582C5.00739 10.8206 5.40384 7.02318 7.79848 4.62844C8.46771 3.9592 9.2622 3.42833 10.1366 3.06613C11.011 2.70394 11.9481 2.51752 12.8946 2.51752C13.841 2.51752 14.7782 2.70394 15.6526 3.06613C16.527 3.42833 17.3215 3.9592 17.9907 4.62844C20.3853 7.02318 20.7817 10.8206 18.9333 13.6582Z" fill="white"/>
+                                            </svg>
+                                            span Москва - подробный адрес
+                                    .col-12.col-md-6.col-lg-3
+                                        .callback__item
+                                            a(href='#')
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18.75 3H8.25C7.85218 3 7.47064 3.15804 7.18934 3.43934C6.90804 3.72064 6.75 4.10218 6.75 4.5V22.5C6.75 22.8978 6.90804 23.2794 7.18934 23.5607C7.47064 23.842 7.85218 24 8.25 24H18.75C19.1478 24 19.5294 23.842 19.8107 23.5607C20.092 23.2794 20.25 22.8978 20.25 22.5V4.5C20.25 4.10218 20.092 3.72064 19.8107 3.43934C19.5294 3.15804 19.1478 3 18.75 3ZM8.25 4.5H18.75V18H8.25V4.5ZM8.25 22.5V19.5H18.75V22.5H8.25Z" fill="white"/>
+                                                <path d="M12.75 20.25H14.25V21.75H12.75V20.25Z" fill="white"/>
+                                                </svg>
+                                                span Москва - подробный адрес
+                                    .col-12.col-md-6.col-lg-3
+                                        .callback__item
+                                            a(href='#')
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18.75 3H8.25C7.85218 3 7.47064 3.15804 7.18934 3.43934C6.90804 3.72064 6.75 4.10218 6.75 4.5V22.5C6.75 22.8978 6.90804 23.2794 7.18934 23.5607C7.47064 23.842 7.85218 24 8.25 24H18.75C19.1478 24 19.5294 23.842 19.8107 23.5607C20.092 23.2794 20.25 22.8978 20.25 22.5V4.5C20.25 4.10218 20.092 3.72064 19.8107 3.43934C19.5294 3.15804 19.1478 3 18.75 3ZM8.25 4.5H18.75V18H8.25V4.5ZM8.25 22.5V19.5H18.75V22.5H8.25Z" fill="white"/>
+                                                <path d="M12.75 20.25H14.25V21.75H12.75V20.25Z" fill="white"/>
+                                                </svg>
+                                                span Москва - подробный адрес
+                                    .col-12.col-md-6.col-lg-3
+                                        .callback__item
+                                            a(href='#')
+                                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18.75 3H8.25C7.85218 3 7.47064 3.15804 7.18934 3.43934C6.90804 3.72064 6.75 4.10218 6.75 4.5V22.5C6.75 22.8978 6.90804 23.2794 7.18934 23.5607C7.47064 23.842 7.85218 24 8.25 24H18.75C19.1478 24 19.5294 23.842 19.8107 23.5607C20.092 23.2794 20.25 22.8978 20.25 22.5V4.5C20.25 4.10218 20.092 3.72064 19.8107 3.43934C19.5294 3.15804 19.1478 3 18.75 3ZM8.25 4.5H18.75V18H8.25V4.5ZM8.25 22.5V19.5H18.75V22.5H8.25Z" fill="white"/>
+                                                <path d="M12.75 20.25H14.25V21.75H12.75V20.25Z" fill="white"/>
+                                                </svg>
+                                                span Москва - подробный адрес
+    .section.section_vendors
+        .container
+            .slider-vendors
+                - for (let i = 0; i<10;i++)
+                    .vendor
+                        img(src="../assets/img/vendor.png")
+block script

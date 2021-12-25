@@ -66,4 +66,35 @@
       text-align: right;
     }
   }
+  &__wrapper {
+    padding-top: 84px;
+    position: relative;
+    z-index: 2;
+    @include media(992) {
+      padding-top: 20px;
+    }
+  }
+  &__wrap {
+    overflow: hidden;
+    padding: 60px 0;
+    max-width: 100%;
+    .slick-list {
+      overflow: visible;
+    }
+  }
+  &__slide {
+    filter: blur(20px);
+    transition: all .25s;
+    &.slick-center {
+      filter: blur(0px);
+      transform: scale(1.4);
+      position: relative;
+      z-index: 3;
+      div {
+        position: relative;
+        z-index: 3;
+      }
+    }
+  }
+
 }

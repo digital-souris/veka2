@@ -7,8 +7,20 @@
   display: block;
   position: relative;
   z-index: 2;
+  @include media(768) {
+    padding: 20px;
+  }
   &:hover {
     text-decoration: none;
+  }
+  &__image {
+    @include media(992) {
+      text-align: center;
+    }
+    img {
+      vertical-align: top;
+      max-width: 100%;
+    }
   }
   &__title {
     font-size: rem(45px);
@@ -17,5 +29,91 @@
     color: #1C1C1C;
     font-weight: bold;
     text-align: center;
+    @include media(480) {
+      font-size: rem(32);
+    }
+  }
+  &__text {
+    padding-top: 60px;
+    @include media(992) {
+      padding-top: 20px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    p {
+      font-size: rem(20);
+      color: #000;
+      font-weight: 500;
+    }
+    ul {
+      padding-top: 35px;
+      li {
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &:last-child {
+          padding-bottom: 0;
+        }
+        span {
+          font-size: rem(20);
+          color: #000;
+          font-weight: 500;
+          padding-left: 16px;
+        }
+        i {
+          position: relative;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: rem(20);
+          color: #fff;
+          &::before {
+            content: '';
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            top: 50%;
+            z-index: -1;
+            left: 50%;
+            background-color: #0074B8;
+            transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  &__video {
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include media(992) {
+      padding-top: 40px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    span {
+      padding-left: 23px;
+      color: #0074B8;
+      font-weight: 500;
+      font-size: rem(25);
+      line-height: 1.1;
+    }
+  }
+  &__info {
+    padding-top: 30px;
+    font-size: rem(20);
+    color: #000;
+    padding-left: 23 + 69 + 0px;
+    font-weight: 500;
+    max-width: 250px;
+    @include media(992) {
+      max-width: 420px;
+      margin: 0 auto;
+      padding-left: 0;
+    }
   }
 }
